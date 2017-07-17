@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SearchResultCell" rowHeight="80" id="PgK-EE-iod" customClass="SearchResultCell" customModule="StoreSearch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PgK-EE-iod" id="NC6-mZ-swi">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="fgo-5s-C3t">
+                        <rect key="frame" x="15" y="10" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="7Et-vY-gJh"/>
+                            <constraint firstAttribute="height" constant="60" id="vo7-2p-dDf"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rC0-c0-o6D">
+                        <rect key="frame" x="90" y="15" width="222" height="22"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdk-sO-H0I">
+                        <rect key="frame" x="90" y="44" width="222" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="rC0-c0-o6D" firstAttribute="top" secondItem="NC6-mZ-swi" secondAttribute="top" constant="15" id="3Ux-KF-QlG"/>
+                    <constraint firstItem="Mdk-sO-H0I" firstAttribute="leading" secondItem="fgo-5s-C3t" secondAttribute="trailing" constant="15" id="9LX-hf-0QU"/>
+                    <constraint firstItem="rC0-c0-o6D" firstAttribute="leading" secondItem="fgo-5s-C3t" secondAttribute="trailing" constant="15" id="JFS-MT-Oan"/>
+                    <constraint firstItem="fgo-5s-C3t" firstAttribute="top" secondItem="NC6-mZ-swi" secondAttribute="top" constant="10" id="S9e-tZ-DxG"/>
+                    <constraint firstAttribute="trailing" secondItem="rC0-c0-o6D" secondAttribute="trailing" constant="8" id="S9n-wV-f8T"/>
+                    <constraint firstAttribute="trailing" secondItem="Mdk-sO-H0I" secondAttribute="trailing" constant="8" id="c5k-Ng-tvM"/>
+                    <constraint firstAttribute="bottom" secondItem="Mdk-sO-H0I" secondAttribute="bottom" constant="17.5" id="mjv-7X-pcf"/>
+                    <constraint firstItem="fgo-5s-C3t" firstAttribute="leading" secondItem="NC6-mZ-swi" secondAttribute="leading" constant="15" id="q6a-iL-WAu"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="artistNameLabel" destination="Mdk-sO-H0I" id="Kxy-0k-G5Y"/>
+                <outlet property="artworkImageView" destination="fgo-5s-C3t" id="w3p-f4-2dw"/>
+                <outlet property="nameLabel" destination="rC0-c0-o6D" id="IYK-02-QNK"/>
+            </connections>
+            <point key="canvasLocation" x="-63" y="-69"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Placeholder" width="60" height="60"/>
+    </resources>
+</document>
