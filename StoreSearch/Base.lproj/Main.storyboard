@@ -152,16 +152,24 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6B-XE-fTL">
-                                        <rect key="frame" x="168" y="212" width="68" height="24"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6B-XE-fTL">
+                                        <rect key="frame" x="165" y="210" width="69" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="XLP-OW-FnW"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                         <state key="normal" title="$9.99" backgroundImage="PriceButton"/>
+                                        <connections>
+                                            <action selector="openInStore" destination="9Nz-wF-Lv1" eventType="touchUpInside" id="8pC-Ix-dSy"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.9532320205479452" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="go2-uc-Axl"/>
+                                    <constraint firstAttribute="trailing" secondItem="O6B-XE-fTL" secondAttribute="trailing" constant="6" id="rOs-xL-Wg5"/>
+                                    <constraint firstAttribute="bottom" secondItem="O6B-XE-fTL" secondAttribute="bottom" constant="6" id="vIQ-Yh-UzU"/>
                                     <constraint firstAttribute="height" constant="240" id="wXj-3z-cCC"/>
                                 </constraints>
                             </view>

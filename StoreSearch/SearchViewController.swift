@@ -38,6 +38,15 @@ class SearchViewController: UIViewController {
         tableView.register(cellNib, forCellReuseIdentifier: TableViewCellIdentifiers.loadingCell)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetail" {
+            let detailViewController = segue.destination as! DetailViewController
+            let indexPath = sender as! IndexPath
+            let searchResult = searchResults[indexPath.row]
+            detailViewController.searchResult = searchResult
+        }
+    }
+    
     func iTunesURL(searchText: String, category: Int) -> URL {
         let entityName: String
         switch category {
