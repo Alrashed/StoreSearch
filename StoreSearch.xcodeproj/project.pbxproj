@@ -17,6 +17,8 @@
 		E90D13361F1D3F6A001BFD4D /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E90D13351F1D3F6A001BFD4D /* NothingFoundCell.xib */; };
 		E90D13381F1DA1C8001BFD4D /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E90D13371F1DA1C8001BFD4D /* LoadingCell.xib */; };
 		E90D133A1F1E941B001BFD4D /* UIImageView+DownloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90D13391F1E941B001BFD4D /* UIImageView+DownloadImage.swift */; };
+		E90D133C1F1E9AE0001BFD4D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90D133B1F1E9AE0001BFD4D /* DetailViewController.swift */; };
+		E984EC821F1E9E42001FC468 /* DimmingPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E984EC811F1E9E42001FC468 /* DimmingPresentationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		E90D13351F1D3F6A001BFD4D /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
 		E90D13371F1DA1C8001BFD4D /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 		E90D13391F1E941B001BFD4D /* UIImageView+DownloadImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+DownloadImage.swift"; sourceTree = "<group>"; };
+		E90D133B1F1E9AE0001BFD4D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E984EC811F1E9E42001FC468 /* DimmingPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DimmingPresentationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +71,14 @@
 				E90D131D1F1D1AF4001BFD4D /* AppDelegate.swift */,
 				E90D132F1F1D324A001BFD4D /* SearchResult.swift */,
 				E90D131F1F1D1AF4001BFD4D /* SearchViewController.swift */,
+				E90D133B1F1E9AE0001BFD4D /* DetailViewController.swift */,
+				E984EC811F1E9E42001FC468 /* DimmingPresentationController.swift */,
 				E90D13331F1D3BE8001BFD4D /* SearchResultCell.swift */,
 				E90D13391F1E941B001BFD4D /* UIImageView+DownloadImage.swift */,
+				E90D13211F1D1AF4001BFD4D /* Main.storyboard */,
 				E90D13311F1D37FC001BFD4D /* SearchResultCell.xib */,
 				E90D13351F1D3F6A001BFD4D /* NothingFoundCell.xib */,
 				E90D13371F1DA1C8001BFD4D /* LoadingCell.xib */,
-				E90D13211F1D1AF4001BFD4D /* Main.storyboard */,
 				E90D13241F1D1AF4001BFD4D /* Assets.xcassets */,
 				E90D13291F1D1AF4001BFD4D /* Info.plist */,
 			);
@@ -155,8 +161,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E90D13201F1D1AF4001BFD4D /* SearchViewController.swift in Sources */,
+				E984EC821F1E9E42001FC468 /* DimmingPresentationController.swift in Sources */,
 				E90D13301F1D324B001BFD4D /* SearchResult.swift in Sources */,
 				E90D13341F1D3BE8001BFD4D /* SearchResultCell.swift in Sources */,
+				E90D133C1F1E9AE0001BFD4D /* DetailViewController.swift in Sources */,
 				E90D131E1F1D1AF4001BFD4D /* AppDelegate.swift in Sources */,
 				E90D133A1F1E941B001BFD4D /* UIImageView+DownloadImage.swift in Sources */,
 			);
@@ -314,6 +322,7 @@
 				E90D132E1F1D1AF4001BFD4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
