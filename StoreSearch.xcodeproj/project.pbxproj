@@ -16,6 +16,7 @@
 		E90D13321F1D37FC001BFD4D /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E90D13311F1D37FC001BFD4D /* SearchResultCell.xib */; };
 		E90D13341F1D3BE8001BFD4D /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E90D13331F1D3BE8001BFD4D /* SearchResultCell.swift */; };
 		E90D13361F1D3F6A001BFD4D /* NothingFoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E90D13351F1D3F6A001BFD4D /* NothingFoundCell.xib */; };
+		E90D13381F1DA1C8001BFD4D /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E90D13371F1DA1C8001BFD4D /* LoadingCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		E90D13311F1D37FC001BFD4D /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
 		E90D13331F1D3BE8001BFD4D /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		E90D13351F1D3F6A001BFD4D /* NothingFoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NothingFoundCell.xib; sourceTree = "<group>"; };
+		E90D13371F1DA1C8001BFD4D /* LoadingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				E90D13331F1D3BE8001BFD4D /* SearchResultCell.swift */,
 				E90D13311F1D37FC001BFD4D /* SearchResultCell.xib */,
 				E90D13351F1D3F6A001BFD4D /* NothingFoundCell.xib */,
+				E90D13371F1DA1C8001BFD4D /* LoadingCell.xib */,
 				E90D13211F1D1AF4001BFD4D /* Main.storyboard */,
 				E90D13241F1D1AF4001BFD4D /* Assets.xcassets */,
 				E90D13261F1D1AF4001BFD4D /* LaunchScreen.storyboard */,
@@ -138,6 +141,7 @@
 			files = (
 				E90D13281F1D1AF4001BFD4D /* LaunchScreen.storyboard in Resources */,
 				E90D13251F1D1AF4001BFD4D /* Assets.xcassets in Resources */,
+				E90D13381F1DA1C8001BFD4D /* LoadingCell.xib in Resources */,
 				E90D13321F1D37FC001BFD4D /* SearchResultCell.xib in Resources */,
 				E90D13361F1D3F6A001BFD4D /* NothingFoundCell.xib in Resources */,
 				E90D13231F1D1AF4001BFD4D /* Main.storyboard in Resources */,
