@@ -24,6 +24,9 @@ class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        title = NSLocalizedString("Search", comment: "Split-view master button")
+        
         searchBar.becomeFirstResponder()
         tableView.contentInset = UIEdgeInsets(top: 108, left: 0, bottom: 0, right: 0)
         tableView.rowHeight = 80
