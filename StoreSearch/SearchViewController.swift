@@ -109,16 +109,17 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController: UISearchBarDelegate {
     func performSearch() {
-        search.performSearch(for: searchBar.text!, category: segmentedControl.selectedSegmentIndex,
-                             completion: { success in
-            if !success {
-                self.showNetworkError()
-            }
-            self.tableView.reloadData()
-        })
-        
-        tableView.reloadData()
-        searchBar.resignFirstResponder()
+        if let category = Search.Category(rawValue: segmentedControl.selectedSegmentIndex) {
+            search.performSearch(for: searchBar.text!, category: category, completion: { success in
+                if !success {
+                    self.showNetworkError()
+                }
+                self.tableView.reloadData()
+            })
+            
+            tableView.reloadData()
+            searchBar.resignFirstResponder()
+        }
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -133,11 +134,11 @@ extension SearchViewController: UISearchBarDelegate {
 extension SearchViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if search.isLoading {
-            return 1
+            return 1    // Loading...
         } else if !search.hasSearched {
-            return 0
+            return 0    // Not searched yet
         } else if search.searchResults.count == 0 {
-            return 1
+            return 1    // Nothing Found
         } else {
             return search.searchResults.count
         }

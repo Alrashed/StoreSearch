@@ -17,7 +17,23 @@ class Search {
     
     private var dataTask: URLSessionDataTask? = nil
     
-    func performSearch(for text: String, category: Int, completion: @escaping SearchComplete) {
+    enum Category: Int {
+        case all = 0
+        case music = 1
+        case software = 2
+        case ebooks = 3
+        
+        var entityName: String {
+            switch self {
+            case .all: return ""
+            case .music: return "musicTrack"
+            case .software: return "software"
+            case .ebooks: return "ebook"
+            }
+        }
+    }
+    
+    func performSearch(for text: String, category: Category, completion: @escaping SearchComplete) {
         if !text.isEmpty {
             dataTask?.cancel()
             
@@ -58,15 +74,8 @@ class Search {
         }
     }
     
-    private func iTunesURL(searchText: String, category: Int) -> URL {
-        let entityName: String
-        switch category {
-        case 1: entityName = "musicTrack"
-        case 2: entityName = "software"
-        case 3: entityName = "ebook"
-        default: entityName = ""
-        }
-        
+    private func iTunesURL(searchText: String, category: Category) -> URL {
+        let entityName = category.entityName
         let escapedSearchText = searchText.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed)!
         let urlString = String(format: "https://itunes.apple.com/search?term=%@&limit=200&entity=%@", escapedSearchText, entityName)
         let url = URL(string: urlString)
