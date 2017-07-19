@@ -27,6 +27,7 @@ class LandscapeViewController: UIViewController {
         
         pageControl.removeConstraints(pageControl.constraints)
         pageControl.translatesAutoresizingMaskIntoConstraints = true
+        pageControl.numberOfPages = 0
         
         scrollView.removeConstraints(scrollView.constraints)
         scrollView.translatesAutoresizingMaskIntoConstraints = true
@@ -110,6 +111,21 @@ class LandscapeViewController: UIViewController {
         
         scrollView.contentSize = CGSize(width: CGFloat(numPages)*scrollViewWidth,
                                         height: scrollView.bounds.size.height)
-        print("Number of pages: \(numPages)")
+        pageControl.numberOfPages = numPages
+        pageControl.currentPage = 0
+    }
+    
+    @IBAction func pageChanged(_ sender: UIPageControl) {
+        UIView.animate(withDuration: 0.3, delay: 0, options: [.curveEaseInOut], animations: { 
+            self.scrollView.contentOffset = CGPoint(x: self.scrollView.bounds.size.width * CGFloat(sender.currentPage), y: 0)
+        }, completion: nil)
+    }
+}
+
+extension LandscapeViewController: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let width = scrollView.bounds.size.width
+        let currentPage = Int((scrollView.contentOffset.x + width/2)/width)
+        pageControl.currentPage = currentPage
     }
 }
