@@ -117,6 +117,7 @@ extension SearchViewController: UISearchBarDelegate {
                     self.showNetworkError()
                 }
                 self.tableView.reloadData()
+                self.landscapeViewController?.searchResultsReceived()
             })
             
             tableView.reloadData()
