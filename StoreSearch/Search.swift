@@ -11,10 +11,6 @@ import Foundation
 typealias SearchComplete = (Bool) -> Void
 
 class Search {
-    var searchResults: [SearchResult] = []
-    var hasSearched = false
-    var isLoading = false
-    
     private var dataTask: URLSessionDataTask? = nil
     
     enum Category: Int {
@@ -33,19 +29,27 @@ class Search {
         }
     }
     
+    enum State {
+        case notSearchYet
+        case loading
+        case noResults
+        case results([SearchResult])
+    }
+    
+    private(set) var state: State = .notSearchYet
+    
     func performSearch(for text: String, category: Category, completion: @escaping SearchComplete) {
         if !text.isEmpty {
             dataTask?.cancel()
             
-            isLoading = true
-            hasSearched = true
-            searchResults = []
+            state = .loading
             
             let url = iTunesURL(searchText: text, category: category)
             
             let session = URLSession.shared
             dataTask = session.dataTask(with: url, completionHandler: { data, response, error in
                 
+                self.state = .notSearchYet
                 var success = false
                 
                 if let error = error as NSError?, error.code == -999 {
@@ -54,16 +58,15 @@ class Search {
                 
                 if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200,
                     let data = data, let jsonDictionary = self.parse(json: data) {
-                    self.searchResults = self.parse(dictionary: jsonDictionary)
-                    self.searchResults.sort(by: <)
                     
-                    self.isLoading = false
+                    var searchResults = self.parse(dictionary: jsonDictionary)
+                    if searchResults.isEmpty {
+                        self.state = .noResults
+                    } else {
+                        searchResults.sort(by: <)
+                        self.state = .results(searchResults)
+                    }
                     success = true
-                }
-                
-                if !success {
-                    self.hasSearched = false
-                    self.isLoading = false
                 }
                 
                 DispatchQueue.main.async {
