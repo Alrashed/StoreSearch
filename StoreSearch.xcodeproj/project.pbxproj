@@ -24,6 +24,7 @@
 		E984EC881F1EBA1B001FC468 /* SlideOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E984EC871F1EBA1B001FC468 /* SlideOutAnimationController.swift */; };
 		E984EC8A1F1EDDF5001FC468 /* LandscapeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E984EC891F1EDDF5001FC468 /* LandscapeViewController.swift */; };
 		E984EC8E1F1EE7D1001FC468 /* FadeOutAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E984EC8D1F1EE7D1001FC468 /* FadeOutAnimationController.swift */; };
+		E9FCBD761F1FB2BD00B2C1BB /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FCBD751F1FB2BD00B2C1BB /* Search.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		E984EC871F1EBA1B001FC468 /* SlideOutAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideOutAnimationController.swift; sourceTree = "<group>"; };
 		E984EC891F1EDDF5001FC468 /* LandscapeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandscapeViewController.swift; sourceTree = "<group>"; };
 		E984EC8D1F1EE7D1001FC468 /* FadeOutAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeOutAnimationController.swift; sourceTree = "<group>"; };
+		E9FCBD751F1FB2BD00B2C1BB /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				E90D131D1F1D1AF4001BFD4D /* AppDelegate.swift */,
+				E9FCBD751F1FB2BD00B2C1BB /* Search.swift */,
 				E90D132F1F1D324A001BFD4D /* SearchResult.swift */,
 				E90D131F1F1D1AF4001BFD4D /* SearchViewController.swift */,
 				E984EC891F1EDDF5001FC468 /* LandscapeViewController.swift */,
@@ -175,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9FCBD761F1FB2BD00B2C1BB /* Search.swift in Sources */,
 				E90D13201F1D1AF4001BFD4D /* SearchViewController.swift in Sources */,
 				E984EC821F1E9E42001FC468 /* DimmingPresentationController.swift in Sources */,
 				E984EC8E1F1EE7D1001FC468 /* FadeOutAnimationController.swift in Sources */,
