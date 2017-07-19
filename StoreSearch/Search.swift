@@ -50,7 +50,7 @@ class Search {
             let session = URLSession.shared
             dataTask = session.dataTask(with: url, completionHandler: { data, response, error in
                 
-                self.state = .notSearchYet
+                var newState = State.notSearchYet
                 var success = false
                 
                 if let error = error as NSError?, error.code == -999 {
@@ -62,15 +62,16 @@ class Search {
                     
                     var searchResults = self.parse(dictionary: jsonDictionary)
                     if searchResults.isEmpty {
-                        self.state = .noResults
+                        newState = .noResults
                     } else {
                         searchResults.sort(by: <)
-                        self.state = .results(searchResults)
+                        newState = .results(searchResults)
                     }
                     success = true
                 }
                 
                 DispatchQueue.main.async {
+                    self.state = newState
                     UIApplication.shared.isNetworkActivityIndicatorVisible = false
                     completion(success)
                 }
