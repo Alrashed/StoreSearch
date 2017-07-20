@@ -27,6 +27,7 @@
 		E9FCBD821F1FD1E400B2C1BB /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9FCBD841F1FD1E400B2C1BB /* SearchResultCell.xib */; };
 		E9FCBD871F1FD3AF00B2C1BB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9FCBD851F1FD3AF00B2C1BB /* Localizable.strings */; };
 		E9FCBD8B1F1FDB0D00B2C1BB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = E9FCBD8D1F1FDB0D00B2C1BB /* InfoPlist.strings */; };
+		E9FCBD901F20342A00B2C1BB /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9FCBD8F1F20342A00B2C1BB /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		E9FCBD881F1FD3E700B2C1BB /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		E9FCBD8C1F1FDB0D00B2C1BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		E9FCBD8E1F1FDB0E00B2C1BB /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		E9FCBD8F1F20342A00B2C1BB /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				E90D131F1F1D1AF4001BFD4D /* SearchViewController.swift */,
 				E984EC891F1EDDF5001FC468 /* LandscapeViewController.swift */,
 				E90D133B1F1E9AE0001BFD4D /* DetailViewController.swift */,
+				E9FCBD8F1F20342A00B2C1BB /* MenuViewController.swift */,
 				E90D13331F1D3BE8001BFD4D /* SearchResultCell.swift */,
 				E984EC831F1EB243001FC468 /* GradientView.swift */,
 				E984EC851F1EB5F5001FC468 /* BounceAnimationController.swift */,
@@ -195,6 +198,7 @@
 				E9FCBD761F1FB2BD00B2C1BB /* Search.swift in Sources */,
 				E90D13201F1D1AF4001BFD4D /* SearchViewController.swift in Sources */,
 				E984EC821F1E9E42001FC468 /* DimmingPresentationController.swift in Sources */,
+				E9FCBD901F20342A00B2C1BB /* MenuViewController.swift in Sources */,
 				E984EC8E1F1EE7D1001FC468 /* FadeOutAnimationController.swift in Sources */,
 				E90D13301F1D324B001BFD4D /* SearchResult.swift in Sources */,
 				E90D13341F1D3BE8001BFD4D /* SearchResultCell.swift in Sources */,
