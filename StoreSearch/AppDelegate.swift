@@ -33,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         customizeApperarance()
         
         detailViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
+        searchViewController.splitViewDetail = detailViewController
         
         return true
     }

@@ -17,8 +17,16 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var genreLabel: UILabel!
     @IBOutlet weak var priceButton: UIButton!
     
-    var searchResult: SearchResult!
     var downloadTask: URLSessionDownloadTask?
+    var isPopUp = false
+    
+    var searchResult: SearchResult! {
+        didSet {
+            if isViewLoaded {
+                updateUI()
+            }
+        }
+    }
     
     enum AnimationStyle {
         case slide
@@ -44,13 +52,24 @@ class DetailViewController: UIViewController {
         view.backgroundColor = UIColor.clear
         view.tintColor = UIColor(red: 20/255, green: 160/255, blue: 160/255, alpha: 1)
         
-        let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(close))
-        gestureRecognizer.cancelsTouchesInView = false
-        gestureRecognizer.delegate = self
-        view.addGestureRecognizer(gestureRecognizer)
-        
         if searchResult != nil {
             updateUI()
+        }
+        
+        if isPopUp {
+            let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(close))
+            gestureRecognizer.cancelsTouchesInView = false
+            gestureRecognizer.delegate = self
+            view.addGestureRecognizer(gestureRecognizer)
+            
+            view.backgroundColor = UIColor.clear
+        } else {
+            view.backgroundColor = UIColor(patternImage: UIImage(named: "LandscapeBackground")!)
+            popupView.isHidden = true
+        }
+        
+        if let displayName = Bundle.main.localizedInfoDictionary?["CFBundleDisplayName"] as? String {
+            title = displayName
         }
     }
     
@@ -84,6 +103,8 @@ class DetailViewController: UIViewController {
         if let largeURL = URL(string: searchResult.artworkLargeURL) {
             downloadTask = artworkImageview.loadImage(url: largeURL)
         }
+        
+        popupView.isHidden = false
     }
     
     @IBAction func close() {
